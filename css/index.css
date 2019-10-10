@@ -176,6 +176,11 @@ nav {
   flex-wrap: initial;
   width: 50%;
 }
+@media (max-width: 650px) {
+  nav {
+    width: 70%;
+  }
+}
 @media (max-width: 515px) {
   nav {
     width: 100%;
@@ -330,7 +335,7 @@ button:active {
   flex-direction: initial;
   flex-wrap: initial;
 }
-@media (max-width: 515px) {
+@media (max-width: 650px) {
   .home .content-pick {
     display: flex;
     justify-content: center;
@@ -343,7 +348,7 @@ button:active {
   width: 30%;
   margin-bottom: 30px;
 }
-@media (max-width: 515px) {
+@media (max-width: 650px) {
   .home .content-pick .destination {
     width: 80%;
   }

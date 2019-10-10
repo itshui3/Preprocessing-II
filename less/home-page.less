@@ -103,14 +103,14 @@
     border-top: @border; //move to section.content-destination
     .flex-align (@justify: space-between, @align: initial, @direction: initial, @wrap: initial);
 
-    @media @mobile {
+    @media @tablet {
       .flex-align (@justify: center, @align: center, @direction: column, @wrap: wrap);
     }
     .destination {
       width: @pickwidth;
       margin-bottom: 30px;
 
-      @media @mobile {
+      @media @tablet {
         width: 80%;
       }
       .btn-cont {

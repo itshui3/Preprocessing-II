@@ -1,14 +1,26 @@
 // Navigation Styles here
+
 nav {
-  display: flex;
+
+  .flex-align (@justify: space-around, @align: initial, @direction: initial, @wrap: initial);
   width: 50%;
-  justify-content: space-evenly;
-  @media @phone {
+  @media @mobile {
     width: 70%;
   }
   a {
     text-decoration: none;
-    color: @shark;
-    font-weight: 650;
+    font-size: 1.6rem;
+    color: black;
+  }
+}
+
+button {
+  width: 100%;
+  border-radius: 10px;
+  color: @white;
+  background: @eastern-blue;
+  &:active { 
+    color: @eastern-blue;
+    background: @white;
   }
 }

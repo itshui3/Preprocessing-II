@@ -10,8 +10,9 @@
 }
 
 .home {
+  margin: 0px 1%;
   @media @mobile {
-    margin: 0px 15px;
+
     padding-right: 5%;
   }
   header {
@@ -101,9 +102,17 @@
     padding-top: 30px;
     border-top: @border; //move to section.content-destination
     .flex-align (@justify: space-between, @align: initial, @direction: initial, @wrap: initial);
+
+    @media @mobile {
+      .flex-align (@justify: center, @align: center, @direction: column, @wrap: wrap);
+    }
     .destination {
       width: @pickwidth;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+      }
       .btn-cont {
         width: 80%;
         height: 30px;

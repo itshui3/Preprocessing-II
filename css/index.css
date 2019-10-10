@@ -220,9 +220,11 @@ button:active {
     top: 114px;
   }
 }
+.home {
+  margin: 0px 1%;
+}
 @media (max-width: 515px) {
   .home {
-    margin: 0px 15px;
     padding-right: 5%;
   }
 }
@@ -328,9 +330,23 @@ button:active {
   flex-direction: initial;
   flex-wrap: initial;
 }
+@media (max-width: 515px) {
+  .home .content-pick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 515px) {
+  .home .content-pick .destination {
+    width: 80%;
+  }
 }
 .home .content-pick .destination .btn-cont {
   width: 80%;

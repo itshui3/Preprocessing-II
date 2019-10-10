@@ -1,3 +1,14 @@
+.btn {
+  width: 202px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: #008B8B;
+  color: #FFFFFF;
+  font-size: 1.9rem;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -173,6 +184,11 @@ nav {
   width: 50%;
   justify-content: space-evenly;
 }
+@media (max-width: 501px) {
+  nav {
+    width: 70%;
+  }
+}
 nav a {
   text-decoration: none;
   color: #212529;
@@ -188,6 +204,9 @@ nav a {
   color: #212529;
   font-size: 1.6rem;
   padding: 20px;
+}
+.home {
+  margin: 0px 10px;
 }
 .home header {
   display: flex;
@@ -259,7 +278,21 @@ nav a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 501px) {
+  .home .content-pick {
+    flex-wrap: wrap;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 501px) {
+  .home .content-pick .destination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 15px 0px;
+  }
 }

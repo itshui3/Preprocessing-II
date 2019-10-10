@@ -1,1 +1,17 @@
 // Mixins in here
+
+.centerButton(@width, @padding, @radius, @fontsize) {
+  width: @width;
+  padding: @padding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: @radius;
+  background: #008B8B;
+  color: #FFFFFF;
+  font-size: @fontsize;
+}
+
+.btn {
+  .centerButton(202px, 12px, 15px, 1.9rem);
+}

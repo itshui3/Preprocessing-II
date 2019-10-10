@@ -1,5 +1,6 @@
 
 .home {
+  margin: 0px 10px;
 
   header {
 
@@ -18,7 +19,7 @@
     flex-direction: column;
     .header-top {
       h2{
-        font-weight: 800; 
+        font-weight: 800;
         margin: 25px 0px;
       }
       width: 100%;
@@ -30,7 +31,6 @@
       margin-top: 20px;
       font-weight: 650;
     }
-
   }
 
   .content-section {
@@ -85,10 +85,20 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media (max-width:501px) {
+      flex-wrap: wrap;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media (max-width: 501px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 15px 0px;
+      }
     }
   }
 }// home

@@ -205,8 +205,10 @@ nav a {
   font-size: 1.6rem;
   padding: 20px;
 }
-.home {
-  margin: 0px 10px;
+@media (max-width: 501px) {
+  .home {
+    margin: 0px 10px;
+  }
 }
 .home header {
   display: flex;

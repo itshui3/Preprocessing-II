@@ -22,10 +22,9 @@ nav {
 button {
   width: 100%;
   border-radius: 10px;
-  color: @white;
-  background: @eastern-blue;
+  .colors (@white, @eastern-blue);
   &:active { 
-    color: @eastern-blue;
-    background: @white;
+    .colors (@eastern-blue, @white);
   }
 }
+

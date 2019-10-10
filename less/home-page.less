@@ -1,31 +1,79 @@
-.home {
+.top-border {
+  position: absolute;
+  top: 79px;
+  border-bottom: @border;
+  z-index: 50;
+  width: 100%;
+  @media @mobile {
+    top: 114px;
+  }
+}
 
+.home {
+  margin: 0px 1%;
+  @media @mobile {
+
+    padding-right: 5%;
+  }
+  header {
+    border-bottom: @border;
+    .top-hdr {
+      .flex-align (@justify: space-between, @align: baseline, @direction: row, @wrap: no-wrap);
+      margin: 20px 0px;
+      @media @mobile {
+        .flex-align (@justify: center, @align: baseline, @direction: row, @wrap: wrap);
+      }
+    }
+    .bottom-hdr {
+      .flex-align (@justify: space-evenly, @align: initial, @direction: column, @wrap: initial);
+
+      .welcome {
+        .flex-align (@justify: space-evenly, @align: initial, @direction: column, @wrap: initial);
+        margin: 20px 0px;
+      }
+    }
+
+    @media @mobile {
+
+    }
+  }
+// above is header
   .content-section {
     margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    .flex-align (@justify: space-between, @align: initial, @direction: initial, @wrap: wrap);
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+        @media @mobile {
+          width: 100%;
+
+        }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+        @media @mobile {
+          width: 100%;
+
+        }
 
       img {
         border-radius: 10px;
       }
     }
+    @media @mobile {
+
+    }
   }
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    border-bottom: @border;
+      @media @mobile {
+        flex-direction: column-reverse;
+      }
 
     .text-content {
       padding-left: 1%;
@@ -41,6 +89,9 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -49,13 +100,25 @@
 
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+    border-top: @border; //move to section.content-destination
+    .flex-align (@justify: space-between, @align: initial, @direction: initial, @wrap: initial);
 
+    @media @tablet {
+      .flex-align (@justify: center, @align: center, @direction: column, @wrap: wrap);
+    }
     .destination {
-      width: 30%;
+      width: @pickwidth;
       margin-bottom: 30px;
+
+      @media @tablet {
+        width: 80%;
+      }
+      .btn-cont {
+        width: 80%;
+        height: 30px;
+        .flex-align (@justify: center, @align: initial, @direction: initial, @wrap: initial);
+
+      }
     }
   }
 }// home

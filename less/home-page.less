@@ -1,13 +1,31 @@
-.home {
+.top-border {
+  position: absolute;
+  top: 79px;
+  border-bottom: @border;
+  z-index: 50;
+  width: 100%;
+}
 
+.home {
+  header {
+    border-bottom: @border;
+    .top-hdr {
+      .flex-align (@justify: space-between, @align: baseline, @direction: row, @wrap: no-wrap);
+      margin: 20px 0px;
+    }
+    .bottom-hdr {
+      .flex-align (@justify: space-evenly, @align: initial, @direction: column, @wrap: initial);
+
+      .welcome {
+        .flex-align (@justify: space-evenly, @align: initial, @direction: column, @wrap: initial);
+        margin: 20px 0px;
+      }
+    }
+  }
+// above is header
   .content-section {
     margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-   
-    
+    .flex-align (@justify: space-between, @align: initial, @direction: initial, @wrap: wrap);
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -25,7 +43,7 @@
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    border-bottom: @border;
 
     .text-content {
       padding-left: 1%;
@@ -49,13 +67,17 @@
 
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
-
+    border-top: @border; //move to section.content-destination
+    .flex-align (@justify: space-between, @align: initial, @direction: initial, @wrap: initial);
     .destination {
-      width: 30%;
+      width: @pickwidth;
       margin-bottom: 30px;
+      .btn-cont {
+        width: 80%;
+        height: 30px;
+        .flex-align (@justify: center, @align: initial, @direction: initial, @wrap: initial);
+
+      }
     }
   }
 }// home
